@@ -1,10 +1,12 @@
 <?php
-/*
-Plugin Name: UOM Multi
-Version: 1.0.1
-Description: UOM for multisite
-Author: OnlineVagyok
-Author URI: https://onlinevagyok.hu
+/**
+* Plugin Name: UOM Multi
+* Version: 1.0.1
+* Description: UOM for multisite
+* Author: OnlineVagyok
+* Author URI: https://onlinevagyok.hu
+* Text Domain: uom-multi
+* Domain Path: /languages/
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,7 +23,7 @@ add_action( 'woocommerce_product_options_general_product_data', 'uommulti_woo_cu
 function uommulti_woo_custom_fields() {
   $field = array(
     'id' => 'uommulti_custom_field',
-    'label' => __( 'Mennyiségi egység:', 'textdomain' ),
+    'label' => __( 'Unit of Measurement:', 'uom-multi' ),
 
   );
   woocommerce_wp_text_input( $field );
